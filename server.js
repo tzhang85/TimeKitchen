@@ -1,15 +1,30 @@
 import config, {nodeEnv, logStars} from './config';
 import fs from 'fs';
 import express from 'express';
+import apiRouter from './api';
 
 // logStars('Function');
 // console.log(config);
 
 const server = express();
 
+server.set('view engine', 'ejs');
+
 server.get('/', (req, res) =>{
-  res.send('Hello /');
+
+  //load index.ejs from views folder
+  res.render('index', {
+    content: '<em>ejs</em>'
+  });
+  //res.send('Hello /');
 });
+
+server.use('/api', apiRouter);
+
+
+
+server.use(express.static('public'));
+//managing static assets are much faster if done in NGINX
 
 server.get('/about.html', (req, res) => {
   fs.readFile('./public/about.html', (err, data) => {
