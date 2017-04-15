@@ -7,7 +7,7 @@ const color = Math.random() > 0.5 ? 'green' : 'red';
 const Header = (props) => {
   return (
       <h2 style = {{color: color}} className = "Header text-center">
-        JSX in with React!!!!!! {props.message}
+        {props.message}
       </h2>
   );
 };

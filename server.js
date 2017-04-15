@@ -1,78 +1,94 @@
+console.log("server kai shi");
 import config, {nodeEnv, logStars} from './config';
 import fs from 'fs';
 import express from 'express';
 import apiRouter from './api';
+import sassMiddleware from 'node-sass-middleware'
+import path from 'path';
+
 
 // logStars('Function');
 // console.log(config);
 
 const server = express();
 
+server.use(sassMiddleware({
+  src: path.join(__dirname, 'sass'),
+  dest: path.join(__dirname, 'public'),
+}));
+
 server.set('view engine', 'ejs');
 
+console.log("wo cao, yao import server render le");
+import serverRender from './serverRender';
+console.log("wo cao, import wan le");
+
 server.get('/', (req, res) =>{
+  serverRender()
+    .then(content => {
+      console.log("wocao, zhe shi sha");
+      res.render('index', {
+        content
+      });
+
+    })
+    .catch(console.error)
+
 
   //load index.ejs from views folder
-  res.render('index', {
-    content: '<em>ejs</em>'
-  });
+  // res.render('index', {
+  //   content: '<em>ejs</em>'
+  // });
   //res.send('Hello /');
 });
 
 server.use('/api', apiRouter);
-
-
-
 server.use(express.static('public'));
-//managing static assets are much faster if done in NGINX
 
-server.get('/about.html', (req, res) => {
-  fs.readFile('./public/about.html', (err, data) => {
-    //err would be null if succeed
-    if(err)
-      res.send(err.toString());
-    res.send(data.toString());
-  });
-});
 
-server.get('/login.html', (req, res) => {
-  fs.readFile('./public/login.html', (err, data) => {
-    //err would be null if succeed
-    if(err)
-      res.send(err.toString());
-    res.send(data.toString());
-  });
-});
-
-server.get('/main.html', (req, res) => {
-  fs.readFile('./public/about.html', (err, data) => {
-    //err would be null if succeed
-    if(err)
-      res.send(err.toString());
-    res.send(data.toString());
-  });
-});
-
-server.get('/.html', (req, res) => {
-  fs.readFile('./public/about.html', (err, data) => {
-    //err would be null if succeed
-    if(err)
-      res.send(err.toString());
-    res.send(data.toString());
-  });
-});
-
-server.listen(config.port, ()=>{
+server.listen(config.port, config.host, () => {
+  console.info('Express listening on host ', config.host);
   console.info('Express listening on port ', config.port);
 });
 
 
+//managing static assets are much faster if done in NGINX
 
-
-
-
-
-
+// server.get('/about.html', (req, res) => {
+//   fs.readFile('./public/about.html', (err, data) => {
+//     //err would be null if succeed
+//     if(err)
+//       res.send(err.toString());
+//     res.send(data.toString());
+//   });
+// });
+//
+// server.get('/login.html', (req, res) => {
+//   fs.readFile('./public/login.html', (err, data) => {
+//     //err would be null if succeed
+//     if(err)
+//       res.send(err.toString());
+//     res.send(data.toString());
+//   });
+// });
+//
+// server.get('/main.html', (req, res) => {
+//   fs.readFile('./public/about.html', (err, data) => {
+//     //err would be null if succeed
+//     if(err)
+//       res.send(err.toString());
+//     res.send(data.toString());
+//   });
+// });
+//
+// server.get('/.html', (req, res) => {
+//   fs.readFile('./public/about.html', (err, data) => {
+//     //err would be null if succeed
+//     if(err)
+//       res.send(err.toString());
+//     res.send(data.toString());
+//   });
+// });
 
 
 

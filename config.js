@@ -1,3 +1,5 @@
+console.log('config import wan le');
+
 const env = process.env;
 
 //named exports
@@ -11,5 +13,10 @@ export const logStars = function(message){
 
 //default export
 export default {
-	port: env.PORT || 8080
+	port: env.PORT || 8080,
+	host: env.HOST || '0.0.0.0',
+	//getter
+	get serverUrl(){
+		return `http://${this.host}:${this.port}`;
+	}
 };
