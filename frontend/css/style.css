@@ -1,0 +1,213 @@
+@charset "UTF-8";
+/* CSS Document */
+body{
+	font-family: Helvetica, Arial, "sans-serif";
+	min-width: 1000px;
+	height:2000px;
+}
+a{
+	text-decoration: none;
+}
+.nav-index{
+	width: 60%;
+	margin: 0 auto;
+}
+.top-left,.top-right{
+	margin-top: 1.8em;
+	width: 33%;
+	float: left;
+}
+.top-left{
+	
+}
+.top-phone{
+	height: 60px;
+	color: #e95412;
+	font-size: 1.4em;
+}
+.top-phone .phone-img{
+	float: left;
+}
+.top-phone .phone-num{
+	float: left;
+	text-align: center;
+	vertical-align: middle;
+	margin-left: 0.6em;
+	line-height: 40px;
+}
+
+.top-login{
+	height: 60px;
+}
+
+.top-login .button{
+	margin-left: 0.8em;
+	float: right;
+	height: 1.8em;
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	background-position: center center;
+}
+.top-login .join{
+	width: 6em;
+	background-image: url(../images/join_button.png);
+}
+.top-login .join:hover{
+	width: 6em;
+	background-image: url(../images/join_button_hover.png);
+}
+.top-login .login{
+	width: 4em;
+	background-image: url(../images/login_button.png);
+}
+.top-login .login:hover{
+	width: 4em;
+	background-image: url(../images/login_button_hover.png);
+}
+.line-orange{
+	height: 1px;
+	background: #f8b72d;
+	margin: 3px auto 0 auto;
+}
+.nav-buttons{
+	text-align: center;
+	margin: 1em 0;
+}
+
+.nav-buttons .button{
+	float: left;
+	font-size: 1em;
+	color: #e95412;
+	width: 50%;
+	line-height: 3em;
+}
+.nav-buttons .button:hover{
+	color: #fff;
+	background: url(../images/menu-hover.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center center;
+}
+.top-center{
+	width: 33%;
+	float: left;
+	text-align: center;
+}
+.top-center img{
+	width: 60%;
+	min-width: 160px;
+	max-width: 214px;
+}
+.top-right{
+	
+}
+.banner{
+	background-image: url(../images/banner-bg.png);
+	width: 100%;
+	z-index: -4;
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	min-width: 1000px;
+}
+.banner-video{
+	text-align: center;
+}
+.banner-video img{
+	position: relative;
+	top:0;
+	width: 100%;
+}
+
+
+
+.nav-index-fixed{
+	position: fixed;
+	width: 100%;
+	background-color:rgba(255, 255, 255, 0.5);
+	left: 0;
+	top: 0;
+	right: 0;
+	min-width: 1000px;
+	display: none;
+}
+.nav-index-fixed-container{
+	width: 100%;
+	margin: 0 auto;
+}
+.phone-fixed{
+	color: #e95412;
+	font-size: 1.4em;
+	float: left;
+	width: 20%;
+	margin: 0.4em 0;
+}
+.phone-fixed .phone-img{
+	float: right;
+}
+.phone-fixed .phone-num{
+	float: right;
+	text-align: center;
+	vertical-align: middle;
+	margin-left: 0.6em;
+	line-height: 40px;
+}
+
+.nav-buttons-fixed{
+	float: left;
+	text-align: center;
+	width: 20%;
+}
+
+.nav-buttons-fixed .button{
+	float: left;
+	font-size: 1em;
+	color: #e95412;
+	width: 50%;
+	line-height: 3.6em;
+}
+.nav-buttons-fixed .button:hover{
+	color: #fff;
+	background: url(../images/menu-hover.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center center;
+}
+
+.logo-fixed{
+	float: left;
+	text-align: center;
+	vertical-align: middle;
+	width: 20%;
+}
+
+.login-fixed{
+	float: left;
+	width: 20%;
+}
+
+.login-fixed .button{
+	margin: 0.8em 0.6em;
+	float: left;
+	height: 1.8em;
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	background-position: center center;
+}
+.login-fixed .join{
+	width: 6em;
+	background-image: url(../images/join_button.png);
+}
+.login-fixed .join:hover{
+	width: 6em;
+	background-image: url(../images/join_button_hover.png);
+}
+.login-fixed .login{
+	width: 4em;
+	background-image: url(../images/login_button.png);
+}
+.login-fixed .login:hover{
+	width: 4em;
+	background-image: url(../images/login_button_hover.png);
+}
