@@ -379,3 +379,194 @@ a{
 .sc-more img{
 	width: 100%;
 }
+.learn{
+}
+.learn-container{
+	width: 70%;
+	margin: 0 auto;
+}
+.lc-header{
+	padding: 3em 0 2.4em 0;
+	text-align: center;
+}
+.lc-header img{
+	width: 80%;
+}
+.lcm-img{
+	width: 60%;
+	float: left;
+}
+.lcm-img img{
+	width: 100%;
+}
+.lcm-content{
+	width: 40%;
+	float: left;
+}
+.lcmc-container{
+	margin-left: 2em;
+}
+.lcmc-head{
+	color:#70ab34;
+	font-size: 0.9em;
+	margin: 1.6em 0 0.8em 0;
+}
+.lcmc-content{
+	color: #4a4a4a;
+	font-size: 0.8em;
+	line-height: 1.4em;
+}
+.lcmc-link a{
+	color: #e95412;
+	text-decoration: underline;
+}
+.learn-faq{
+	width:100%;
+	margin: 10% 0 0 0;
+	text-align: center;
+}
+.learn-faq img{
+	width:80%;
+}
+.comment{
+	position: relative;
+	top:-4px;
+}
+.comment img{
+	width:100%;
+}
+.cant{
+	position: relative;
+	top:-60px;
+}
+.cant-img{
+	position: absolute;
+	width:100%;
+}
+.cant-btn{
+	text-align: center;
+	z-index: 10;
+}
+.cant-btn img{
+	position: relative;
+	margin-top: 16%;
+	width: 20%;
+}
+.prefooter{
+	position: relative;
+	background-image: url(../images/banner-bg.png);
+	width: 100%;
+	z-index: -4;
+}
+.prefooter-container{
+	width: 70%;
+	margin: 0 auto;
+	padding-top: 3em;
+}
+.pref-c{
+	float: left;
+	width: 50%;
+}
+.pref-c-h{
+	margin: 0 auto;
+	width: 50%;
+	text-align: center;
+}
+.pref-c-h img{
+	width: 100%;
+}
+.pref-c-h-r{
+	margin-left: 10%;
+	width: 50%;
+	text-align: center;
+	float: left;
+}
+.pref-c-h-r img{
+	width: 100%;
+}
+.pref-c .line{
+	height: 1px;
+	margin: 1.4em auto;
+	width: 90%;
+	background-color: #ccc;
+}
+.social{
+	width: 36%;
+	float: right;
+	margin-top: 3%;
+}
+.social img{
+	width:13%;
+}
+.prefl-img{
+	float: left;
+	width: 30%;
+}
+.prefl-img img{
+	width: 100%;
+}
+.prefl-content{
+	float: right;
+	width: 60%;
+}
+.prefl-head{
+	margin-top: 6%;
+	color: #e95412;
+	font-size: 1.1em;
+	line-height: 2em;
+}
+.prefl-p{
+	color: #4a4a4a;
+	font-size: 0.8em;
+	line-height: 1.8em;
+}
+.pref-email{
+	margin: 10% auto 0 auto;
+	width: 80%;
+}
+.pref-email .des{
+	font-size: 0.8em;
+	color:#f8b72d;
+	line-height: 2em;
+}
+.pref-email .input{
+	width: 100%;
+}
+.pref-email .input input{
+	width: 100%;
+	line-height: 2em;
+	font-size: 1em;
+	text-indent: 1em;
+}
+.pref-email .button{
+	float: right;
+	width: 20%;
+	margin-top: 0.4em;
+}
+.pref-email .button img{
+	width:100%;
+}
+.footer{
+	border-top: #ccc 1px solid;
+	position: relative;
+}
+.footer-container{
+	width:70%;
+	margin: 0 auto;
+	line-height: 5.6em;
+	font-size: 0.8em;
+	color: #bbb;
+}
+.footer-link{
+	float: left;
+}
+.footer-copyright{
+	float: right;
+}
+.footer a{
+	color: #bbb;
+	margin: 0 0.2em;
+}
+.footer a:hover{
+	color: #888;
+}
