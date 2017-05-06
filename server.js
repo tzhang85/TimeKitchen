@@ -1,11 +1,10 @@
-console.log("server kai shi");
 import config, {nodeEnv, logStars} from './config';
 import fs from 'fs';
 import express from 'express';
 import apiRouter from './api';
 import sassMiddleware from 'node-sass-middleware'
 import path from 'path';
-
+import serverRender from './serverRender';
 
 // logStars('Function');
 // console.log(config);
@@ -19,32 +18,26 @@ server.use(sassMiddleware({
 
 server.set('view engine', 'ejs');
 
-console.log("wo cao, yao import server render le");
-import serverRender from './serverRender';
-console.log("wo cao, import wan le");
-
-server.get('/', (req, res) =>{
-  serverRender()
-    .then(content => {
-      console.log("wocao, zhe shi sha");
+server.get(['/', '/contests/:contestId'], (req, res) =>{
+  serverRender(req.params.contestId)
+    .then(({initialMarkup, initialData}) => {
       res.render('index', {
-        content
+        initialMarkup,
+        initialData
       });
-
     })
     .catch(console.error)
-
+});
 
   //load index.ejs from views folder
   // res.render('index', {
   //   content: '<em>ejs</em>'
   // });
   //res.send('Hello /');
-});
+
 
 server.use('/api', apiRouter);
 server.use(express.static('public'));
-
 
 server.listen(config.port, config.host, () => {
   console.info('Express listening on host ', config.host);

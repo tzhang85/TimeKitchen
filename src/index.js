@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
-
 import App from './components/App';
 
 //import data from './testData';
@@ -11,18 +10,24 @@ import App from './components/App';
 //   headerMessage = 'Hello!!'
 // };
 //debugger;
-console.log('index kai shi le');
+
 ReactDOM.render(
-  //react takes html elements as objects and stores them in trees. It will
-  //compares the trees for differences and update them.
-  //React.createElement('h1', null, 'Hello React1111111'),
-  //JSX
-  // <h2 style = {{color: color}} className = "text-center">
-  //   JSX in with React!!!!!!
-  // </h2>,
-  <App headerMessage="Hello props!" initialContests={[]}/>,
+  <App initialData= {window.initialData} />,
   document.getElementById('root')
 );
+
+
+// ReactDOM.render(
+//   //react takes html elements as objects and stores them in trees. It will
+//   //compares the trees for differences and update them.
+//   //React.createElement('h1', null, 'Hello React1111111'),
+//   //JSX
+//   // <h2 style = {{color: color}} className = "text-center">
+//   //   JSX in with React!!!!!!
+//   // </h2>,
+//   <App headerMessage="Hello props!" initialContests={[]}/>,
+//   document.getElementById('root')
+// );
 
 // setTimeout(() => {
 //   ReactDOM.render(
