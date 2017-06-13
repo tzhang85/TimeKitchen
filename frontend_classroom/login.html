@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="css/login.css" />
+    <title>登录系统</title>
+</head>
+<body>
+    <div class="loginheader">
+        <div class="login-exit">
+            <a href="#">
+                <div class="login-exit-image">
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="login-container">
+        <div class="login-title">
+            <img class="login-logo" src="images/logo.png" />
+        </div>
+        <div class="clear"></div>
+        <div class="login-panel">
+            <div class="lp-content">
+
+
+                <form action="" method="post" id="login-form" name="login-form">
+                    <div class="login-info">
+                        <span class="user">&nbsp;</span>
+                        <input name="username" id="username" placeholder="用户名" type="text" onblur="checkUsername()" value="" class="login-input" />
+                    </div>
+                    <div class="login-info">
+                        <span class="pwd">&nbsp;</span>
+                        <input name="password" id="password" placeholder="密  码" type="password" onblur="checkPassword()" value="" class="login-input" />
+                    </div>
+
+                    <div class="login-oper1">
+                        <input name="" type="submit" value="登 录" class="login-btn" />
+                    </div>
+                    <div class="login-oper2">
+                        <span><a href="#">立即注册</a></span>
+                        <span>&nbsp;|&nbsp;</span>
+                        <span><a href="#">忘记密码</a></span>
+                    </div>
+                    <div class="login-oper3">
+                        <div>其他登录方式</div>
+                        <span><a href="#"><img src="images/wechat_logo.png"/></a></span>
+                        <span><a href="#"><img src="images/weibo_logo.png"/></a></span>
+                    </div>
+                </form>
+                <div class="clear"></div>
+
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>

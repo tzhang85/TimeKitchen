@@ -1,0 +1,1367 @@
+﻿body {
+    overflow-x: hidden;
+    font-family: 'Microsoft YaHei' Arial Verdana;
+}
+
+.clear {
+    clear: both;
+}
+
+.header {
+    position: fixed;
+    z-index: 100;
+    background: #eee;
+    height: 60px;
+    width: 100%;
+}
+
+    .header .logo {
+        float: left;
+        padding: 8px 0 4px 14px;
+    }
+
+        .header .logo img {
+            width: 46px;
+            height: 46px;
+        }
+
+#citySelect {
+    float: left;
+    appearance: none;
+    -moz-appearance: none; /* Firefox */
+    -webkit-appearance: none; /* Safari 和 Chrome */
+    padding: 20px 14px 18px 0;
+    margin-left: 10px;
+    color: #797979;
+    background: url(../images/down_arrow.png) no-repeat center right;
+    outline: none;
+    border: none;
+}
+
+    #citySelect:active {
+        outline: none;
+        border: none;
+    }
+
+.search {
+    float: left;
+    margin-top: 16px;
+    width: 40%;
+    margin-left: 10px;
+}
+
+    .search .search-input {
+        float: left;
+        width: 70%;
+        border-radius: 3px 0 0 3px;
+        height: 30px;
+        border: 1px solid #787878;
+    }
+
+    .search .search-btn {
+        position: absolute;
+        width: 40px;
+        color: #FFF;
+        background: #787878;
+        border: 1px solid #787878;
+        border-radius: 0 3px 3px 0;
+        outline: none;
+        height: 30px;
+    }
+
+.header-links {
+    float: right;
+    color: #787878;
+    margin-top: 21px;
+    right: 6px;
+    position: absolute;
+}
+
+    .header-links a {
+        color: #787878;
+    }
+
+.header-control {
+    color: #787878;
+    float: right;
+    margin: 14px 6px;
+}
+
+    .header-control button {
+        background: none;
+        border: none;
+    }
+
+.header-me-btn {
+    padding: 0 4px;
+}
+
+.header-menu-btn {
+    padding: 0 8px;
+}
+
+.header .dropdown-menu .glyphicon {
+    font-size: 24px;
+    vertical-align: central;
+    margin-right: 4px;
+}
+
+.header .header-ddmt {
+    vertical-align: 20%;
+}
+
+
+
+
+
+
+.sliderContainer {
+    padding-top: 60px;
+}
+
+#full-width-slider {
+    width: 100%;
+}
+
+.slider-info {
+    font-size: 2em;
+    color: #FFF;
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+}
+
+.slider-info-title {
+    font-size: 1em;
+    color: #FFF;
+    position: absolute;
+    left: 20px;
+    bottom: 0px;
+}
+
+.slider-info-control {
+    font-size: 0.5em;
+    color: #000;
+    position: absolute;
+    right: 20px;
+    bottom: 0px;
+}
+
+.sic-location {
+    float: left;
+    margin-right: 1em;
+}
+
+.sic-price {
+    float: right;
+}
+
+.sic-price-red {
+    font-size: 3.2em;
+    color: #2db352;
+    line-height: 1em;
+}
+
+.sic-expire {
+    font-size: 0.8em;
+    color: #2db352;
+}
+
+.sic-btns {
+    float: right;
+    margin-top: 10px;
+    margin-right: 3em;
+}
+
+.sic-btn {
+    background-color: transparent;
+    background: none;
+    border: 2px solid #2db352;
+    color: #2db352;
+    margin-right: 1.4em;
+}
+
+    .sic-btn:hover {
+        background-color: #2db352;
+        border: 2px solid #2db352;
+        color: #FFF;
+    }
+
+.mid-banner {
+    width: 100%;
+    padding: 1em;
+    margin-top: 60px;
+}
+
+    .mid-banner img {
+        width: 100%;
+    }
+
+.branch-container {
+    margin-top: 24px;
+    width: 100%;
+}
+
+.con-header {
+    height: 1.42em;
+    border-bottom: 3px solid #707070;
+    width: 94%;
+    margin: 0 auto;
+    font-size: 1em;
+}
+
+.con-header-title {
+    color: #797979;
+    border-bottom: 3px solid #2db352;
+    font-weight: bold;
+    font-size: 1.6em;
+    float: left;
+    position: relative;
+    bottom: 0.22em;
+    line-height: 1em;
+    padding: 0 4px;
+}
+
+.con-header-des {
+    float: left;
+    font-size: 0.8em;
+    color: #787878;
+}
+
+.con-header-links {
+    float: right;
+    font-size: 0.7em;
+}
+
+    .con-header-links a {
+        color: #666;
+    }
+
+    .con-header-links .more {
+        margin-left: 6px;
+    }
+
+
+
+.con-sub {
+    width: 94%;
+    margin: 1.2em auto 3em auto;
+}
+
+.con-sub-img {
+    position: absolute;
+    width: 94%;
+}
+
+    .con-sub-img img {
+        width: 100%;
+    }
+
+.con-sub-info {
+    position: relative;
+    bottom: 0px;
+    font-size: 1.1em;
+}
+
+.con-sub-info-title {
+    font-size: 1.1em;
+    font-weight: bold;
+    margin-bottom: 0.4em;
+    white-space: normal;
+}
+
+.con-sub-info-des {
+}
+
+.csi-location {
+    float: left;
+    margin-right: 1em;
+}
+
+.csi-price {
+    float: left;
+}
+
+.csi-price-red {
+    font-size: 2.4em;
+    color: #2db352;
+    line-height: 1em;
+}
+
+.csi-expire {
+    font-size: 0.8em;
+    color: #2db352;
+}
+
+.csi-btns {
+    float: left;
+    margin-top: 0.2em;
+    margin-right: 3em;
+}
+
+.csi-btn {
+    background-color: transparent;
+    background: none;
+    border: 2px solid #2db352;
+    color: #2db352;
+    margin-right: 1.4em;
+}
+
+    .csi-btn:hover {
+        background-color: #2db352;
+        border: 2px solid #2db352;
+        color: #FFF;
+    }
+
+
+
+.folder-btn {
+    text-align: center;
+    font-size: 1.2em;
+    margin: 1.1em 0 3em 0;
+}
+
+    .folder-btn img {
+        width: 28px;
+        margin-top: -4px;
+    }
+
+    .folder-btn a {
+        color: #666;
+    }
+
+.brands {
+    width: 100%;
+    margin: 0 auto 80px auto;
+}
+
+.brands-img {
+    float: left;
+    width: 16.6666%;
+    margin: 0 auto;
+}
+
+.brands img {
+    padding: 0;
+    width: 100%;
+}
+
+
+.con-1-1 .con-sub-info {
+    padding: 1.3em 3em;
+}
+
+.con-1-2 .con-sub-info {
+    float: right;
+    padding: 1.3em 1.4em;
+    background: rgba(255,255,255,0.8);
+}
+
+.con-2-1 .con-sub-info {
+    float: right;
+    padding: 1.3em 0.6em;
+}
+
+.con-2-2 .con-sub-info {
+    float: left;
+    padding: 1.3em 1.4em;
+    background: rgba(255,255,255,0.8);
+}
+
+.con-3-1 .con-sub-info {
+    float: left;
+    padding: 1.3em 1.4em;
+}
+
+.con-3-2 .con-sub-info {
+    float: right;
+    padding: 1.3em 0.7em 1.3em 1.4em;
+    background: rgba(255,255,255,0.8);
+}
+
+.footer {
+    width: 100%;
+    margin-bottom: 54px;
+}
+
+
+    .footer img {
+        width: 100%;
+    }
+
+.nav-bottom {
+    padding: 4px 0;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    border-top: 1px solid #a8afa4;
+    background-color: #FFF;
+}
+
+.nav-bottom-btn {
+    margin: 0 auto;
+    text-align: center;
+    float: left;
+    width: 33.3333%;
+    color: #646464;
+}
+
+
+    .nav-bottom-btn.active {
+        color: #6ab07e;
+    }
+
+.nbb-img {
+    font-size: 20px;
+    margin-bottom: 4px;
+}
+
+.nbb-txt {
+    font-size: 12px;
+}
+
+
+/*商品详情页*/
+
+.xq-bigpicture {
+    width: 100%;
+    padding-top: 60px;
+}
+
+    .xq-bigpicture img {
+        width: 100%;
+    }
+
+
+.con-sub-info.csidetail {
+    padding: 2em 3em;
+}
+
+    .con-sub-info.csidetail .csi-btns {
+        margin-top: 1em;
+    }
+
+.xqtab {
+    width: 96%;
+    border: 1px solid #dcdcdc;
+    border-top: 2px solid #999;
+    background: #ffffff;
+    margin: 40px auto;
+    font-size: 1em;
+}
+
+.xqtabTitle {
+    width: 100%;
+    height: 38px;
+    line-height: 38px;
+    border-bottom: 1px solid #dcdcdc;
+    background-color: #f7f7f7;
+}
+
+    .xqtabTitle h1 {
+        cursor: pointer;
+        font-size: 1em;
+        font-weight: bold;
+        background: #f7f7f7;
+        color: #666666;
+        height: 37px;
+        border-left: 1px solid #dcdcdc;
+        border-right: 1px solid #dcdcdc;
+        float: left;
+        position: relative;
+        left: -1px;
+        width: 20%;
+        text-align: center;
+        line-height: 28px;
+        margin: 0;
+    }
+
+        .xqtabTitle h1.normalxqt {
+            left: -2px;
+            border-left: none;
+            border-right: none;
+        }
+
+        .xqtabTitle h1.activedxqt {
+            height: 44px;
+            border-top: 2px solid #e22c3c;
+            border-left: 1px solid #dcdcdc;
+            border-right: 1px solid #dcdcdc;
+            top: -6px;
+            background: #fff;
+        }
+
+.xqtabIn {
+    width: 100%;
+    position: relative;
+    margin: 0;
+}
+
+.xqtabInList {
+    display: none;
+    position: relative;
+    left: 0;
+    top: 0;
+    height: auto;
+    margin: 0;
+}
+
+.xqtab-info {
+    width: 90%;
+    margin: 0 auto;
+}
+
+    .xqtab-info img {
+        width: 100%;
+    }
+
+
+/*注册页面*/
+.sub-header {
+    position: fixed;
+    z-index: 100;
+    background: #f5f5f5;
+    height: 60px;
+    width: 100%;
+}
+
+    .sub-header .sh-backbtn {
+        position: absolute;
+        padding: 18px 16px 18px 16px;
+    }
+
+        .sub-header .sh-backbtn a {
+            padding: 18px 16px 18px 16px;
+        }
+
+    .sub-header .sh-logo {
+        padding-top: 6px;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+        .sub-header .sh-logo img {
+            width: 46px;
+            height: 46px;
+        }
+
+.register {
+    padding-top: 60px;
+}
+
+
+.reg-title {
+    color: #FFF;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.3em;
+    margin: 1.4em 0;
+}
+
+.reg-container {
+    font-size: 1.1em;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background: #FFF;
+    border-radius: 3px;
+    width: 96%;
+    margin: 0 auto;
+}
+
+.reg-item {
+    margin-top: 20px;
+}
+
+.reg-itemtxt {
+    margin-top: 5px;
+    float: left;
+    width: 28%;
+}
+
+    .reg-itemtxt .rit-normal {
+        float: right;
+    }
+
+.reg-iteminput {
+    float: right;
+    width: 72%;
+    padding-left: 16px;
+}
+
+    .reg-iteminput input[type="text"] {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        border: 1px solid #a2a2a2;
+        border-radius: 3px;
+        height: 30px;
+        float: left;
+        width: 80%;
+    }
+
+    .reg-iteminput textarea {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        border: 1px solid #a2a2a2;
+        border-radius: 3px;
+        height: 100px;
+        float: left;
+        width: 80%;
+    }
+
+
+
+.loginCheckDiv {
+    width: 16px;
+    float: left;
+    min-height: 16px;
+    position: relative;
+    margin-right: 6px;
+    margin-top: 2px;
+}
+
+.loginCheckTxt {
+    float: left;
+    margin-right: 20px;
+}
+
+.loginCheck {
+    float: left;
+    box-sizing: border-box;
+    left: 1px;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 0px;
+    width: 1px;
+    height: 1px;
+}
+
+    .loginCheck + label:before {
+        background: #fff url(../images/check_icon.png);
+        height: 16px;
+        vertical-align: middle;
+        width: 16px;
+        content: " ";
+        left: 0;
+        position: absolute;
+    }
+
+    .loginCheck:focus + label:before,
+    .loginCheck + label:hover:before {
+        background-position: -17px 0;
+    }
+
+    .loginCheck:checked + label:before {
+        background-position: -34px 0;
+    }
+
+    .loginCheck[disabled] + label:before {
+        background-position: -51px 0;
+    }
+
+    .loginCheck[disabled]:checked + label:before {
+        background-position: -68px 0;
+    }
+
+.lcb-txt {
+    float: left;
+    margin-right: 14px;
+}
+
+.reg-iteminput.regi-checkbox {
+    margin-top: 5px;
+}
+
+.reg-rawtxt {
+    width: 70%;
+    margin: 0 auto;
+}
+
+.reg-greybtn-con {
+    float: right;
+    width: 72%;
+    padding-left: 16px;
+}
+
+.reg-greybtn {
+    float: left;
+    width: 100%;
+}
+
+    .reg-greybtn button {
+        background: #efefef;
+        border: 1px solid #c8c8c8;
+        border-radius: 6px;
+        padding: 10px 0;
+        width: 56%;
+    }
+
+.reg-greenbtn-con {
+    float: right;
+    width: 72%;
+    padding-left: 16px;
+}
+
+.reg-greenbtn {
+    float: left;
+    width: 100%;
+}
+
+    .reg-greenbtn button {
+        color: #FFF;
+        background: #1ec000;
+        border: 1px solid #1ec000;
+        border-radius: 6px;
+        padding: 10px 0;
+        width: 80%;
+    }
+
+
+/*购物车 - 买单界面*/
+
+.cart {
+    padding-top: 60px;
+}
+
+
+.cart-title {
+    color: #FFF;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.3em;
+    margin: 1.4em 0;
+}
+
+
+.cart-container {
+    border-radius: 3px;
+    font-size: 1.1em;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background: #FFF;
+    border: 1px solid #dfdfdf;
+    width: 96%;
+    margin: 0 auto;
+    margin-bottom: 24px;
+}
+
+
+.cart-item {
+    width: 88%;
+    margin: 0 auto;
+}
+
+    .cart-item .ci-img {
+        width: 40%;
+        float: left;
+    }
+
+        .cart-item .ci-img img {
+            width: 100%;
+        }
+
+    .cart-item .ci-info {
+        float: left;
+        margin-left: 1em;
+        width: 50%;
+    }
+
+.con-sub-info.csicart {
+    font-size: 1em;
+}
+
+.cart-item-control {
+    margin-top: 20px;
+}
+
+    .cart-item-control .cic-addminus {
+        float: left;
+    }
+
+    .cart-item-control .cic-delete {
+        float: left;
+        margin-left: 2em;
+        margin-top: 4px;
+    }
+
+        .cart-item-control .cic-delete a {
+            color: #000;
+        }
+
+.pay-sum {
+    float: right;
+    font-size: 1.1em;
+    font-weight: bold;
+    margin-bottom: 0.4em;
+}
+
+    .pay-sum .pay-sum-ico {
+        font-size: 0.8em;
+        color: #e10000;
+    }
+
+    .pay-sum .pay-sum-money {
+        font-size: 2em;
+        color: #e10000;
+    }
+
+.pay-btn-con {
+    float: right;
+    font-size: 1.1em;
+}
+
+.pay-btn {
+    border-radius: 4px;
+    color: #FFF;
+    background-color: #f19700;
+    border: none;
+    padding: 0.6em 3.6em;
+}
+
+.pay-btn:active {
+    background-color: #ff5a01;
+}
+
+.continue-buy {
+    float: right;
+    margin-right: 4em;
+    margin-top: 0.7em;
+}
+
+    .continue-buy a {
+        color: #000;
+    }
+
+.cart-container.pay-con {
+    padding: 1em 2em;
+    border-radius: 3px;
+}
+
+/*加减*/
+
+.spinner-sprite, .spinner .decrease, .spinner .decrease[disabled], .spinner .increase, .spinner .value, .spinner .value.passive {
+    background: url('../images/spinner.png') no-repeat;
+}
+
+.spinner {
+    height: 25px;
+    width: 71px;
+    overflow: hidden;
+    *zoom: 1;
+    -webkit-box-shadow: 0 3px 3px -4px #aaa;
+    -moz-box-shadow: 0 3px 3px -4px #aaa;
+    box-shadow: 0 3px 3px -4px #aaa;
+}
+
+    .spinner button, .spinner .value {
+        text-align: center;
+        display: block;
+        float: left;
+        height: 100%;
+        line-height: 25px;
+        margin: 0;
+    }
+
+    .spinner button {
+        border: none;
+        width: 23px;
+        color: #e5312a;
+        font: 22px Arial bold;
+        padding: 0;
+        outline: none;
+    }
+
+    .spinner .decrease {
+        background-position: 0 -50px;
+        cursor: pointer;
+        text-indent: -10000px;
+    }
+
+        .spinner .decrease[disabled] {
+            background-position: 0 -75px;
+            cursor: default;
+        }
+
+    .spinner .increase {
+        background-position: 0 0;
+        cursor: pointer;
+        text-indent: -10000px;
+    }
+
+    .spinner .value {
+        background-position: 0 -100px;
+        width: 24px;
+        height: 27px;
+        border: none;
+        font-family: Arial;
+        color: #ffffff;
+        padding: 0px;
+    }
+
+        .spinner .value.passive {
+            background-position: 0 -25px;
+            color: #919191;
+        }
+
+    .spinner .error, .spinner .invalid {
+        background: #aa0000;
+    }
+
+.cic-addminus input[type="text"] {
+    color: #000;
+}
+
+
+
+/*购物车 - 收货人信息界面*/
+.cart-inner-title {
+    text-align: center;
+    font-weight: bold;
+}
+
+.shoujian-btns {
+    color: #FFF;
+    width: 80%;
+}
+
+.shouyellow-btn {
+    background: #ff9000;
+    border: none;
+    padding: 0.6em 0;
+    border-radius: 4px;
+    float: left;
+    width: 46%;
+}
+
+.shoured-btn {
+    background: #f15355;
+    border: none;
+    padding: 0.6em 0;
+    border-radius: 4px;
+    float: right;
+    width: 46%;
+}
+
+
+.item-radios {
+}
+
+
+
+
+/*radio*/
+
+.cart-container input[type="radio"] {
+    margin: 3px 3px 0px 5px;
+    display: none;
+}
+
+.cart-container label {
+    font-weight: normal;
+    margin-right: 1em;
+    padding-left: 24px;
+    cursor: pointer;
+    background: url(../images/inputradio.gif) no-repeat;
+    background-position: 0 -24px;
+}
+
+    .cart-container label.checked {
+        background-position: 0 0;
+    }
+
+.cart-divide {
+    background: #dfdfdf;
+    height: 1px;
+    width: 94%;
+    margin: 1em auto;
+}
+
+.cart-finalitem {
+    width: 88%;
+    margin: 0 auto;
+}
+
+.cfi-img {
+    float: left;
+    width: 30%;
+}
+
+    .cfi-img img {
+        width: 100%;
+    }
+
+.cfi-info {
+    float: right;
+    width: 60%;
+    margin-left: 1em;
+}
+
+    .cfi-info .cfi-info-title {
+        font-weight: bold;
+    }
+
+    .cfi-info .cfi-info-number {
+        margin-top: 88px;
+        float: left;
+        vertical-align: bottom;
+    }
+
+    .cfi-info .cfi-info-money {
+        margin-top: 78px;
+        font-size: 1.6em;
+        float: right;
+        color: #e10000;
+        vertical-align: bottom;
+    }
+
+        .cfi-info .cfi-info-money .smalltxt {
+            font-size: 0.6em;
+        }
+
+.cart-finalprice {
+    width: 88%;
+    margin: 0 auto;
+}
+
+    .cart-finalprice .cfp-txt {
+        line-height: 1.8em;
+        font-size: 1.18em;
+        float: left;
+        width: 64%;
+    }
+
+    .cart-finalprice .cfp-money {
+        font-size: 1.8em;
+        float: left;
+        width: 36%;
+    }
+
+    .cart-finalprice.sum .cfp-txt {
+        font-weight: bold;
+    }
+
+    .cart-finalprice.sum .cfp-money {
+        font-weight: bold;
+        color: #2db352;
+    }
+
+.largeyellowbtn-con {
+    width: 96%;
+    margin: 0 auto;
+}
+
+.largeyellowbtn {
+    font-size:1.1em;
+    color:#FFF;
+    font-weight:bold;
+    border:none;
+    background:#ffc500;
+    padding:1em 0;
+    border-radius:4px;
+    width: 100%;
+    margin-bottom:24px;
+}
+
+.cart-success-normal {
+    line-height:1.6em;
+    width:88%;
+    margin:0 auto;
+}
+    .cart-success-normal.reveiverinfo {
+        padding-bottom:100px;
+    }
+    .cart-success-normal .largetxt {
+        font-size:1.6em;
+        font-weight:bold;
+    }
+
+
+    /*销售合伙人*/
+
+.cic-activity {
+    float:left;
+}
+
+.cic-yjrule {
+    float:right;
+    margin-top:16px;
+}
+.cic-yjrule a{
+    color:#2db352;
+}
+
+.xshhr-container {
+    border-radius: 3px;
+    font-size: 1.1em;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background: #FFF;
+    border: 1px solid #dfdfdf;
+    width: 96%;
+    margin: 0 auto;
+    margin-bottom: 24px;
+    margin-top:14px;
+}
+
+.xshhr-container .cart-item .ci-info {
+        float: left;
+        margin-left: 1em;
+        width: 56%;
+    }
+
+
+.sh-logo.xshhr a {
+    color:#000;
+    font-weight:bold;
+    line-height:60px;
+}
+
+
+.activity {
+    padding-top:60px;
+    margin:0 auto;
+    width:94%;
+}
+.activity-image {
+    margin-top:18px;
+}
+.activity-image img {
+    width:100%;
+}
+.activity-info {
+    font-size:1.3em;
+    margin-top:1em;
+}
+
+    .activity-info .csi-price {
+        float:right;
+    }
+
+    .activity-info .csi-number {
+        float:right;
+    }
+
+    .activity-info .csi-price-red {
+        font-weight:bold;
+    }
+
+.activity-rule {
+    float:right;
+    margin-top:20px;
+}
+
+.activity-rule a{
+    color:#2db352;
+}
+
+.activity-tui {
+    margin-top:20px;
+    border:1px solid #dfdfdf;
+}
+.activity-tui-header {
+    font-size:1.1em;
+    padding:0.88em 1.1em;
+    background:#f5f5f5;
+}
+
+.activity-tui-txt{
+    width:100%;
+    height:100%;
+}
+
+.activity-tui-txt textarea{
+    display: block;
+    padding:20px;
+    width:100%;
+    text-indent:20px;
+    appearance: none;
+    -moz-appearance: none; /* Firefox */
+    -webkit-appearance: none; /* Safari 和 Chrome */
+    border-radius:0;
+    border:none;
+    border-top:1px solid #dfdfdf;
+    border-bottom:1px solid #dfdfdf;
+        overflow: hidden; 
+    font-size: 14px;
+    height: 100px; 
+    line-height: 24px;
+    margin:0 auto;
+}
+
+
+.activity-tui-header2{
+    font-size:1.1em;
+    padding:0.4em 1.1em;
+    background:#f5f5f5;
+}
+
+
+.activity-tui-btnder {
+            margin:0 auto;
+    width:40%;
+}
+
+.activity-tui-btnder button{
+    padding:0.6em 0;
+    background:#ff9000;
+    border:none;
+    border-radius:4px;
+    color:#FFF;
+    width:100%;
+}
+.activity-tui-btnder button:active{
+    background:#ff5a01;
+}
+
+.activity-tui-link {
+    font-size:1.18em;
+    text-align:center;
+    padding:1em 0;
+}
+
+
+.largepinkbtn-con {
+    margin: 1.1em auto;
+}
+
+.largepinkbtn {
+    font-size:1.4em;
+    color:#FFF;
+    font-weight:bold;
+    border:none;
+    background:#f25358;
+    padding:1em 0;
+    border-radius:4px;
+    width: 100%;
+    margin-bottom:24px;
+}
+
+
+
+/*media query*/
+
+@media (max-width:620px) {
+
+    .slider-info {
+        font-size: 2em;
+    }
+
+    .con-sub-info,
+    .con-sub-info.csidetail {
+        font-size: 1em;
+    }
+
+        .con-sub-info.csicart {
+            font-size: 0.8em;
+        }
+}
+
+@media (max-width:540px) {
+
+    .slider-info {
+        font-size: 1.8em;
+    }
+
+    .con-sub-info,
+    .con-sub-info.csidetail {
+        font-size: 0.8em;
+    }
+
+        .con-sub-info.csicart {
+            font-size: 0.7em;
+        }
+
+
+    .cfi-info .cfi-info-number {
+        margin-top: 48px;
+    }
+
+    .cfi-info .cfi-info-money {
+        margin-top: 38px;
+    }
+}
+
+@media (max-width:458px) {
+
+    .search {
+        width: 35%;
+    }
+
+    .slider-info {
+        font-size: 1.6em;
+    }
+
+    .con-sub-info {
+        font-size: 0.6em;
+    }
+
+        .con-sub-info.csidetail {
+            font-size: 0.8em;
+        }
+
+        .con-sub-info.csicart {
+            font-size: 0.7em;
+        }
+
+    .cart-item {
+        width: 96%;
+    }
+
+    .continue-buy {
+        margin-right: 2em;
+    }
+}
+
+@media (max-width:400px) {
+    .cart-item .ci-img {
+        width: 36%;
+    }
+}
+
+@media (max-width:388px) {
+    .search {
+        width: 30%;
+    }
+
+    .slider-info {
+        font-size: 1.4em;
+    }
+
+    .cart-item .ci-img {
+        width: 36%;
+    }
+}
+
+@media (max-width:358px) {
+    .search {
+        width: 26%;
+    }
+}
+
+@media (max-width:336px) {
+    .search {
+        width: 26%;
+    }
+
+    .header .logo {
+        float: left;
+        padding: 8px 0 4px 6px;
+    }
+
+    #citySelect {
+        margin-left: 2px;
+    }
+
+    .cart-item .ci-img {
+        float: none;
+        width: 80%;
+    }
+
+    .cart-item .ci-info {
+        margin-top: 10px;
+        float: none;
+        margin-left: 0;
+    }
+}

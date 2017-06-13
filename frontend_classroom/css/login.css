@@ -1,0 +1,224 @@
+﻿html, body {
+    font-family: 'Microsoft YaHei', 'SimHei', Arial;
+    margin: 0px;
+    height: 100%;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: url(../images/login_bg.png) bottom center;
+    background-size: cover;
+}
+
+.clear {
+    clear: both;
+}
+/*Login页面*/
+
+.loginheader {
+	height: 30px;
+}
+
+
+    .loginheader .loginheader-txt {
+        text-align: center;
+        color: #FFF;
+        line-height: 30px;
+        vertical-align: central;
+        font-size: 18px;
+    }
+
+    .loginheader .login-exit {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+    }
+
+        .loginheader .login-exit .login-exit-txt {
+            color: #C9C9C9;
+            font-size: 14px;
+            float: left;
+        }
+
+        .loginheader .login-exit .login-exit-image {
+            float: left;
+            background-image: url(../images/previous-button.png);
+            width: 40px;
+			height: 40px;
+            background-size: 40px 40px;
+            background-repeat: no-repeat;
+        }
+
+.login-exit a:hover .login-exit-image {
+    background-image: url(../images/previous-button-hover.png);
+}
+
+
+.login-container {
+  position: relative;
+  top: 30%;
+  left: 10%;
+  width:80%;
+  height: 50%;
+  transform: translateX(0%) translateY(-50%);
+-webkit-transform: translateX(0%) translateY(-50%);
+-o-transform: translateX(0%) translateY(-50%);
+-moz-transform: translateX(0%) translateY(-50%);
+}
+
+.login-title {
+    color: #FFF;
+    margin: 0 auto;
+	text-align: center;
+}
+
+    .login-title .login-logo {
+		margin:  0 auto;
+        width: 100px;
+    }
+
+    .login-title .login-title-txt1 {
+        float: left;
+        text-align: center;
+        font-size: 22px;
+        margin-left: 16px;
+    }
+
+    .login-title .login-title-txt2 {
+        float: left;
+        text-align: center;
+        font-size: 37px;
+        font-weight: bold;
+        margin-left: 16px;
+        margin-top: 36px;
+    }
+
+.login-panel {
+    width: 100%;
+    background: #FFF;
+    margin: 0 auto;
+	margin-top:20px;
+}
+
+
+    .login-panel .lp-content {
+        float: left;
+        width: 100%;
+    }
+
+        .login-panel .lp-content .lpc-title {
+            text-align: center;
+            color: #6BC565;
+            font-size: 20px;
+            font-weight: 600;
+            margin-top: 26px;
+        }
+
+	
+#login-form .login-info {
+    width: 80%;
+    height: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    background: #ECF5FA;
+    border: 1px solid #B9C7D2;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+    #login-form .login-info span.user {
+        float: left;
+        width: 40px;
+        height: 40px;
+        margin: 5px auto 5px auto;
+        background: url(../images/lg_user_icon.png) no-repeat center center;
+        border-right: 1px solid #a9a9a9;
+    }
+
+    #login-form .login-info span.pwd {
+        float: left;
+        width: 40px;
+        height: 40px;
+        margin: 5px auto 5px auto;
+        background: url(../images/lg_pwd_icon.png) no-repeat center center;
+        border-right: 1px solid #a9a9a9;
+    }
+
+#login-form .login-input {
+    width: 60%;
+    height: 50px;
+    line-height: 40px;
+    background: #ECF5FA;
+    border: none;
+    margin: 0;
+    padding: 0;
+    padding-left: 20px;
+}
+
+#login-form .login-oper1 {
+    width: 80%;
+    height: 50px;
+    line-height: 40px;
+    margin: 30px auto 0 auto;
+}
+
+#login-form .login-oper2 {
+    color: #DDD;
+    font-size: 14px;
+    width: 170px;
+    height: 50px;
+    line-height: 40px;
+    margin: 22px auto 0 auto;
+	text-align: center;
+}
+
+    #login-form .login-oper2 a {
+        color: #FFF;
+        text-decoration: none;
+    }
+
+        #login-form .login-oper2 a:hover {
+            color: #00A72E;
+        }
+
+#login-form .login-oper3 {
+    color: #DDD;
+    font-size: 14px;
+    width: 170px;
+    height: 50px;
+    line-height: 40px;
+    margin: 20px auto 0 auto;
+	text-align: center;
+}
+
+#login-form .login-oper3 img{
+    width: 36px;
+	margin: 4% 10%;
+	
+}
+
+#login-form .login-btn {
+	-webkit-appearance: none;
+    font-family: 'Microsoft YaHei', 'SimHei', Arial;
+    font-weight: bold;
+    font-size: 20px;
+    width: 100%;
+	left:10%;
+    height: 50px;
+    border: none;
+    background: #2db352;
+	-moz-background: #2db352;
+	-webkit-background: #2db352;
+    color: #ffffff;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+	margin-left: auto;
+    margin-right: auto;
+    cursor: pointer;
+}

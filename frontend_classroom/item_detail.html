@@ -1,0 +1,111 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no,minimal-ui" name="viewport">
+    <title>时光教室 - 商品详情</title>
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/jquery-ui.min.css" rel="stylesheet" />
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+
+    <link href="css/royalslider.css" rel="stylesheet">
+    <link href="css/skin-white.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet" />
+
+</head>
+
+<body>
+    <!-- 顶部导航 -->
+    <div class="header">
+        <form class="" id="act-form" action="/index.php?r=mall/search" method="get">
+            <div class="logo">
+                <img src="images/logo.png" height="40" />
+            </div>
+            <select name="checkbox" id="citySelect">
+                <option value="1">海淀区</option>
+                <option value="2">朝阳区</option>
+                <option value="3">昌平区</option>
+            </select>
+
+            <div class="search">
+                <input type="text" placeholder="请输入关键词" class="search-input">
+                <span class="">
+                    <button type="submit" class="search-btn" value="搜索"><span class="glyphicon glyphicon-search"></span></button>
+                </span>
+            </div>
+            <div class="header-links"><a href="#">注册</a> | <a href="#">登录</a></div>
+        </form>
+
+    </div>
+
+    <div class="clear"></div>
+    <!--详情页大图-->
+
+    <div class="xq-bigpicture">
+        <img src="files/slider1.jpg" />
+    </div>
+
+    <div class="con-sub-info csidetail">
+        <div class="con-sub-info-title">大间教室 K-116</div>
+        <div class="con-sub-info-des">
+            <div class="csi-location">
+                教室所在地：<br />
+                海淀区中关村
+            </div>
+            <div class="csi-price"><del>￥70/小时</del><span class="csi-price-red">60/小时</span></div>
+            <div class="clear"></div>
+            <div class="csi-number">配备：投影仪 多媒体</div>
+            <div class="csi-btns">
+                <button type="button" class="csi-btn">查看详情</button>
+                <button type="button" class="csi-btn">立即预订</button>
+            </div>
+        </div>
+    </div>
+    <div class="clear"></div>
+
+    <!--选项卡-->
+    <div class="xqtab">
+	<div class="xqtabTitle"><h1 class="activedxqt">设施配备</h1><h1 class="normalxqt">适用课程</h1><h1 class="normalxqt">教室评价</h1></div>
+	<div class="xqtabIn">
+		<div class="xqtabInList xqtabInList1" style="display:block;">
+			<div class="clear"></div>
+                <div>设施配备</div>
+		</div>
+		<div class="xqtabInList xqtabInList2">
+            <div class="clear"></div>
+                <div>适用课程</div>
+		</div>
+        <div class="xqtabInList xqtabInList3">
+			<div class="clear"></div>
+                <div>教室评价</div>
+		</div>
+	</div>
+</div>
+
+    <!-- footer -->
+
+    <div class="footer" style="margin-bottom:0;">
+        <img src="images/footer.jpg" />
+    </div>
+
+
+
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/jquery.royalslider.min.js?v=9.3.6"></script>
+    <script src="js/bootstrap.js"></script>
+<script type="text/javascript">
+    $(function () {
+        $(".xqtabTitle h1").click(function () {
+            var index = $(this).index(".xqtabTitle h1");
+            $(this).addClass("activedxqt").siblings().removeClass("activedxqt");
+            $($(".xqtabInList")[index]).show().siblings().hide();
+        })
+    })
+</script>
+</body>
+</html>
