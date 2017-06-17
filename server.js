@@ -4,12 +4,14 @@ import express from 'express';
 import apiRouter from './api';
 import sassMiddleware from 'node-sass-middleware'
 import path from 'path';
-import serverRender from './serverRender';
+import bodyParser from 'body-parser';
+
 
 // logStars('Function');
 // console.log(config);
 
 const server = express();
+server.use(bodyParser.json());
 
 server.use(sassMiddleware({
   src: path.join(__dirname, 'sass'),
@@ -18,22 +20,17 @@ server.use(sassMiddleware({
 
 server.set('view engine', 'ejs');
 
-server.get(['/', '/contests/:contestId'], (req, res) =>{
-  serverRender(req.params.contestId)
-    .then(({initialMarkup, initialData}) => {
-      res.render('index', {
-        initialMarkup,
-        initialData
-      });
-    })
-    .catch(console.error)
-});
+server.get('/', (req, res) => {
+  res.render('index', {title:'title'});
+})
 
-  //load index.ejs from views folder
-  // res.render('index', {
-  //   content: '<em>ejs</em>'
-  // });
-  //res.send('Hello /');
+server.get('/login', (req, res) => {
+  res.render('login', {title:'title'});
+})
+
+server.get('/register', (req, res) => {
+  res.render('register', {title:'title'});
+})
 
 
 server.use('/api', apiRouter);
@@ -44,6 +41,16 @@ server.listen(config.port, config.host, () => {
   console.info('Express listening on port ', config.port);
 });
 
+// server.get(['/', '/contests/:contestId'], (req, res) => {
+//   serverRender(req.params.contestId)
+//     .then(({initialMarkup, initialData}) => {
+//       res.render('index', {
+//         initialMarkup,
+//         initialData
+//       });
+//     })
+//     .catch(console.error)
+// });
 
 //managing static assets are much faster if done in NGINX
 

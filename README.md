@@ -2,5 +2,5 @@
 
 For testing:
 
-webpack
+npm dev
 npm start

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 class Contest extends React.Component {
   render(){
@@ -12,7 +13,7 @@ class Contest extends React.Component {
 
 
 Contest.PropTypes = {
-  id: React.PropTypes.number.isRequired,
+  id: PropTypes.number.isRequired
 };
 
 export default Contest;
