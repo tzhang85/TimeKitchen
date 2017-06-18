@@ -43,17 +43,22 @@ const router = express.Router();
 //     .catch(console.error)
 // });
 
-router.post('/users/add/:', (req, res) => {
+router.post('/users/add', (req, res) => {
   console.log(req.body);
-  const username_new = req.body.username;
-  const password_new = req.body.password;
-  const cellphone_new = req.body.cellphone;
-  mdb.collection("userInfoDb").insertOne(
+  const username_new = req.body.newUsername;
+  const password_new = req.body.newPassword;
+  const cellphone_new = req.body.newCellphone;
+  mdb.collection("users").insertOne(
     {
       username: username_new,
       password: password_new,
       cellphone: cellphone_new
     }
+  )
+  .then( result => 
+    res.send({
+      status: "good"
+    })
   )
   .catch(error => {
     console.error(error);

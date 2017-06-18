@@ -14,23 +14,21 @@ MongoClient.connect(config.mongodbUrl, (err, db) => {
 const router = express.Router();
 
 
-router.get('/contests', (req, res) => {
-  let contests = {};
-  mdb.collection('contests').find({})
+router.get('/users', (req, res) => {
+  let users = {};
+  mdb.collection('users').find({})
     .project({
       id: 1,
-      categoryName: 1,
-      contestName: 1
+      userName: 1
     })
-    .each((err, contest) => {
+    .each((err, user) => {
       assert.equal(null, err);
 
-      if(!contest){
-        res.send({contests});
+      if(!user){
+        res.send({users});
         return;
       }
-
-      contests[contest.id] = contest;
+      users[user.id] = user;
     })
 
 });

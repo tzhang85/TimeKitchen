@@ -1,24 +1,27 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import api from '../api.js'
 
 class LoginForm extends React.Component {
   componentDidMount(){
     //debugger; //pause the program in browser
-    console.log(this.props.id);
-    console.log('loginForm loaded');
+    
   };
   
-  HandleSubmit = () => {
+  HandleSubmit = (event) => {
     //console.log(this.props.contestName);
-    console.log('submitted');
+    event.preventDefault();
+    api.addNewUser(this.refs.newUsername.value, this.refs.newPassword.value);
+    console.log('username: ' + this.refs.newUsername.value 
+            + '; password: ' + this.refs.newPassword.value);
   };
   
   render(){
     return (
       <form onSubmit={this.HandleSubmit}>
         <div className="input-group">
-          <input type="text" placeholder="Username" />
-          <input type="text" placeholder="Password" />
+          <input type="text" ref="newUsername" placeholder="Username" />
+          <input type="text" ref="newPassword" placeholder="Password" />
           <span className="input-group-btn">
             <button type="submit" className="submitBtn">
               Submit

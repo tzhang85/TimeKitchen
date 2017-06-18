@@ -4,3 +4,8 @@ export const fetchContest = contestId =>{
   return axios.get(`/api/contests/${contestId}`)
               .then(resp => resp.data);
 }
+
+export const fetchUsers = () =>{
+  return axios.get(`/api/users/`)
+              .then(resp => resp.data);
+}
