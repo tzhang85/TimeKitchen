@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import ReturnHome from './ReturnHome.js';
+
 class RegisterForm extends React.Component {
   componentDidMount(){
     //debugger; //pause the program in browser
@@ -16,17 +18,20 @@ class RegisterForm extends React.Component {
   
   render(){
     return (
-      <form onSubmit={this.handleSubmit}>
-        <div className="input-group">
-          <input type="text" placeholder="Username" />
-          <input type="text" placeholder="Password" />
-          <span className="input-group-btn">
-            <button type="submit" className="submitBtn">
-              Submit
-            </button>
-          </span>  
-        </div>
-      </form>
+      <div className="register-form">
+        <ReturnHome />
+        <form onSubmit={this.handleSubmit}>
+          <div className="input-group">
+            <input type="text" placeholder="Username" />
+            <input type="text" placeholder="Password" />
+            <span className="input-group-btn">
+              <button type="submit" className="submitBtn">
+                Submit
+              </button>
+            </span>  
+          </div>
+        </form>
+      </div>
     );
   }
 }

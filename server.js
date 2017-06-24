@@ -20,16 +20,16 @@ server.use(sassMiddleware({
 
 server.set('view engine', 'ejs');
 
-server.get('/', (req, res) => {
-  res.render('index', {title:'title'});
-})
+server.get(['', '/index'], (req, res) => {
+  res.render('index', {title:'loading'});
+}) 
 
 server.get('/login', (req, res) => {
-  res.render('login', {title:'title'});
+  res.render('login', {title:'loading'});
 })
 
 server.get('/register', (req, res) => {
-  res.render('register', {title:'title'});
+  res.render('register', {title:'loading'});
 })
 
 

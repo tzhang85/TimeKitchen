@@ -9,3 +9,8 @@ export const addNewUser = (newUsername, newPassword, cellphone) => {
   return axios.post('/api/users/add', {newUsername, newPassword, cellphone})
               .then(resp => resp.data)
 };
+
+export const getAllUsers = () => {
+  return axios.get('/api/users/get/all')
+              .then(resp => resp.data)
+};

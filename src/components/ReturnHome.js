@@ -1,12 +1,11 @@
 //it's a good practice to separate components by files
 import React from 'react';
 import PropTypes from 'prop-types';
-import * as api from '../api.js';
-
-import MainPage from './MainPage'
+import * as api from '../api.js'
+import { Link } from 'react-router-dom';
 
 // React.components (introduces state)
-class App extends React.Component{
+class ReturnHome extends React.Component{
 
   componentDidMount(){
     //debugger; //pause the program in browser
@@ -19,16 +18,15 @@ class App extends React.Component{
 
   render(){
     return (
-      <div className ="app">
-        app
-        <MainPage />
+      <div className="ReturnToHome">
+        <Link to="/"> Return to home </Link>
       </div>
     );
   }
 }
 
-// App.PropTypes = {
-//   headerMessage : PropTypes.string
-// };
+ReturnHome.PropTypes = {
+  headerMessage : PropTypes.string
+};
 
-export default App;
+export default ReturnHome;

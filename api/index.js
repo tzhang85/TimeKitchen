@@ -13,6 +13,31 @@ MongoClient.connect(config.mongodbUrl, (err, db) => {
 
 const router = express.Router();
 
+router.get('/users/get/all', (req, res) => {
+  let users = {};
+  let count = 0;
+  mdb.collection('users').find({})
+    .project(
+      {
+        _id: 1,
+        username: 1,
+        password: 1,
+        cellphone: 1
+      }
+    )
+    .each((err, user) => {
+      assert.equal(null, err);
+      console.log(user);
+      if(!user){
+        res.send(users);
+        return;
+      }
+
+      users[count] = user;
+      count++;
+    })
+});
+
 
 // router.get('/contests', (req, res) => {
 //   let contests = {};
@@ -56,9 +81,9 @@ router.post('/users/add', (req, res) => {
     }
   )
   .then( result => 
-    res.send({
-      status: "good"
-    })
+    {
+      res.send(result);
+    }
   )
   .catch(error => {
     console.error(error);
