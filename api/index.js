@@ -14,7 +14,7 @@ MongoClient.connect(config.mongodbUrl, (err, db) => {
 const router = express.Router();
 
 router.get('/users/get/all', (req, res) => {
-  let users = {};
+  let users = [];
   let count = 0;
   mdb.collection('users').find({})
     .project(
@@ -33,8 +33,7 @@ router.get('/users/get/all', (req, res) => {
         return;
       }
 
-      users[count] = user;
-      count++;
+      users.push(user)
     })
 });
 

@@ -1,18 +1,18 @@
-.ContestPreview{
+.UserList {
   margin: 1em;
   border: 1px solid #ccc;
 
-  .category-name {
-    border-bottom: 1px solid #ccc;
-    padding: 0.25em 0.5em;
-    font-weight: bold;
-    background-color: #eee;
-  }
+  .user{
+    margin: 1em;
+    border: 1px solid #ccc;
 
-  .contest-name{
-    padding: 0.5em;
+    .user-id .user-name .user-password .user-cellphone{
+      border-bottom: 1px solid #ccc;
+      padding: 0.25em 0.5em;
+      font-weight: bold;
+      background-color: #eee;
+    } 
   }
-
 }
 
 .link {

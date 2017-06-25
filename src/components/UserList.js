@@ -1,37 +1,71 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import * as api from '../api.js';
+
+import User from './User';
 
 class UserList extends React.Component {
-  componentDidMount(){
-    //debugger; //pause the program in browser
-    console.log(this.props.id);
-    console.log('registerForm loaded');
+  constructor(props) {
+    super(props);
+    //state内部维护的一个状态，我们刚开始进来的为空，来加载空的view
+    this.state = {
+        users: []
+    };
+
   };
   
-  HandleSubmit = () => {
-    //console.log(this.props.contestName);
-    console.log('submitted');
+  GetUsers() {
+    api.getAllUsers()
+      .then(resp => {
+        this.setState({
+          users: resp
+        })
+      })
+      .catch(console.error)
   };
+
+  
+  
+  componentDidMount(){
+    //debugger; //pause the program in browser
+    console.log('UserList loaded');
+    this.GetUsers();
+  };
+
+  GetContent(){
+    if(this.state.users.count == 0){
+      return (
+        <span>loading users</span>
+      );
+    }
+    else{
+      return (
+        
+        this.state.users.map((user) => 
+          <User
+            key = {user._id}
+            id = {user._id}
+            username= {user.username}
+            password= {user.password}
+            cellphone = {user.cellphone} />
+        )
+      );
+    }
+  }
   
   render(){
     return (
-      <form onSubmit={this.HandleSubmit}>
-        <div className="input-group">
-          <input type="text" placeholder="Username" />
-          <input type="text" placeholder="Password" />
-          <span className="input-group-btn">
-            <button type="submit" className="submitBtn">
-              Submit
-            </button>
-          </span>  
-        </div>
-      </form>
+      <div className = "UserList">
+        <span>All User Info </span>
+        {this.GetContent()}
+      </div>
+
     );
-  }
+  };
 }
 
 // RegisterForm.PropTypes = {
 //   id: PropTypes.number.isRequired
 // };
 
-export default RegisterForm;
+export default UserList;

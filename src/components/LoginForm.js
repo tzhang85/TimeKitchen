@@ -14,7 +14,7 @@ class LoginForm extends React.Component {
   HandleSubmit = (event) => {
     //console.log(this.props.contestName);
     event.preventDefault();
-    api.addNewUser(this.refs.newUsername.value, this.refs.newPassword.value);
+    
   };
   
   render(){

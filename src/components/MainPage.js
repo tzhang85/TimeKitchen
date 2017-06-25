@@ -4,6 +4,8 @@ import PropTypes from 'prop-types';
 import * as api from '../api.js'
 import { Link } from 'react-router-dom';
 
+import UserList from './UserList';
+
 // React.components (introduces state)
 class MainPage extends React.Component{
 
@@ -18,7 +20,8 @@ class MainPage extends React.Component{
 
   render(){
     return (
-      <div>
+      <div>        
+        <UserList />
         <div className="loginBtn">
           <Link to="/login"> Click me to login </Link>
         </div>

@@ -10,14 +10,29 @@ class User extends React.Component {
   
   render(){
     return (
-      
+      <div className="user">
+        <div className = "user-id">
+          {this.props._id}
+        </div>
+        <div className = "user-name">
+          {this.props.username}
+        </div>
+        <div className = "user-password">
+          {this.props.password}
+        </div>
+        <div className = "user-cellphone">
+          {this.props.cellphone}
+        </div>
+      </div>
     );
   }
 }
 
 User.PropTypes = {
-  id: PropTypes.number.isRequired,
-  usrName: PropTypes.string.isRequired
+  _id: PropTypes.number.isRequired,
+  username: PropTypes.string.isRequired,
+  password: PropTypes.string.isRequired,
+  cellphone: PropTypes.string.isRequired
 };
 
-export default RegisterForm;
+export default User;
