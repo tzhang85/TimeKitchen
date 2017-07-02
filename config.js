@@ -13,7 +13,7 @@ export const logStars = function(message){
 
 //default export
 export default {
-	mongodbUrl: 'mongodb://localhost:27017/test',
+	mongodbUrl: 'mongodb://localhost:27017/TimeClassroom',
 	port: env.PORT || 8080,
 	host: env.HOST || '127.0.0.1',
 	//getter

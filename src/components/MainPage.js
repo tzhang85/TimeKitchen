@@ -20,7 +20,7 @@ class MainPage extends React.Component{
 
   render(){
     return (
-      <div>        
+      <div>
         <UserList />
         <div className="loginBtn">
           <Link to="/login"> Click me to login </Link>
@@ -29,7 +29,7 @@ class MainPage extends React.Component{
         <div className="registerBtn">
           <Link to="/register"> Click me to register </Link>
         </div>
-        
+
       </div>
     );
   }

@@ -8,18 +8,18 @@ class LoginForm extends React.Component {
 
   componentDidMount(){
     //debugger; //pause the program in browser
-    
+
   };
-  
+
   HandleSubmit = (event) => {
     //console.log(this.props.contestName);
     event.preventDefault();
     
   };
-  
+
   render(){
     return (
-      
+
       <div className="login-form">
         <ReturnHome />
         <form onSubmit={this.HandleSubmit}>
@@ -30,7 +30,7 @@ class LoginForm extends React.Component {
               <button type="submit" className="submitBtn">
                 Submit
               </button>
-            </span>  
+            </span>
           </div>
         </form>
       </div>
