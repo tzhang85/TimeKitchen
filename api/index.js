@@ -38,23 +38,28 @@ router.get('/users/get/all', (req, res) => {
 });
 
 router.post('/users/check', (req, res) => {
-  const username_in = req.username;
-  const password_in = req.password;
-
-  mdb.collection.findOne({username:username_in})
+  let authorized = false;
+  const username_in = req.body.username;
+  const password_in = req.body.password;
+  mdb.collection("users").findOne({username:username_in})
     .then(user => {
-      let authorized = false;
+      if(user == null){
+        res.send({
+          "token": ""
+        });
+      }
+
       authorized =
         password_in.valueOf() === user.password.valueOf() ? true : false;
 
       if(authorized){
         res.send({
-          "access-token": Date.now()
+          "token": Date.now()
         });
       }
       else{
         res.send({
-          "access-token": ""
+          "token": ""
         });
       }
     })
@@ -133,12 +138,12 @@ router.post('/checktoken', (req, res) => {
   const token = req.body.token;
   if(Date.parse(token) == null){
     res.send({
-      "Message": "Not Pass"
+      "message": 0
     });
   }
   else{
     res.send({
-      "Message": "Pass"
+      "message": 1
     });
   }
 });

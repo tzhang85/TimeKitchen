@@ -8,6 +8,30 @@ import UserList from './UserList';
 
 // React.components (introduces state)
 class MainPage extends React.Component{
+  constructor(props){
+    super(props);
+    this.state = {
+      loggedIn : false
+    };
+  }
+
+  componentWillMount(){
+    api.checkToken(window.sessionStorage['token'])
+      .then(resp => {
+        if(Number(resp.message) == 1){
+          console.log("checking: " + resp.message + true);
+          this.setState({
+            loggedIn : true
+          });
+        }
+        else{
+          console.log("checking: " + resp.message + false);
+          this.setState({
+            loggedIn : false
+          });
+        }
+      })
+  };
 
   componentDidMount(){
     //debugger; //pause the program in browser
@@ -18,14 +42,25 @@ class MainPage extends React.Component{
     //debugger; //pause the program in browser
   };
 
+  currentContent(){
+    console.log("currrent content: " + this.state.loggedIn);
+
+    if(this.state.loggedIn){
+      return <UserList />;
+    }
+    else{
+      return null;
+    }
+  };
+
   render(){
     return (
       <div>
-        <UserList />
+        {this.currentContent()}
         <div className="loginBtn">
           <Link to="/login"> Click me to login </Link>
         </div>
-        
+
         <div className="registerBtn">
           <Link to="/register"> Click me to register </Link>
         </div>

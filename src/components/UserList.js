@@ -13,7 +13,7 @@ class UserList extends React.Component {
     };
 
   };
-  
+
   GetUsers() {
     api.getAllUsers()
       .then(resp => {
@@ -24,12 +24,15 @@ class UserList extends React.Component {
       .catch(console.error)
   };
 
-  
-  
+  componentWillMount(){
+    
+
+    this.GetUsers();
+  };
+
   componentDidMount(){
     //debugger; //pause the program in browser
     console.log('UserList loaded');
-    this.GetUsers();
   };
 
   GetContent(){
@@ -40,8 +43,8 @@ class UserList extends React.Component {
     }
     else{
       return (
-        
-        this.state.users.map((user) => 
+
+        this.state.users.map((user) =>
           <User
             key = {user._id}
             id = {user._id}
@@ -52,7 +55,7 @@ class UserList extends React.Component {
       );
     }
   }
-  
+
   render(){
     return (
       <div className = "UserList">

@@ -21,6 +21,6 @@ export const checkLogin = (username, password) => {
 };
 
 export const checkToken = (token) => {
-  return axois.post('/api/checktoken', {token})
+  return axios.post('/api/checktoken', {token})
               .then(resp => resp.data)
 };

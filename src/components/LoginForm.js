@@ -4,6 +4,9 @@ import * as api from '../api.js';
 
 import ReturnHome from './ReturnHome.js';
 
+const pushState = (obj, url) =>
+  window.history.pushState(obj, '', url);
+
 class LoginForm extends React.Component {
 
   componentDidMount(){
@@ -14,7 +17,13 @@ class LoginForm extends React.Component {
   HandleSubmit = (event) => {
     //console.log(this.props.contestName);
     event.preventDefault();
-    
+    api.checkLogin(this.refs.newUsername.value, this.refs.newPassword.value)
+      .then(resp => {
+        console.log(resp);
+        window.sessionStorage['token'] = resp.token;
+        console.log("token: " + window.sessionStorage['token']);
+        pushState(null, '/');
+      })
   };
 
   render(){
